@@ -1,0 +1,17 @@
+.order-section{
+		position: relative;
+		background: url('./../../img/decor/order-pattern.png');
+
+	&::before{
+		content: url('./../../img/decor/blueberries-2.png');
+		position: absolute;
+		bottom: 69px;
+		left: 5%;
+	}
+	&::after{
+		content: url('./../../img/decor/leaf-1.png');
+		position: absolute;
+		bottom: 58px;
+		right: 5%;
+	}
+}

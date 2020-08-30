@@ -1,0 +1,82 @@
+.hero{
+	background: url('../../img/decor/pattern-1.png') right bottom no-repeat;
+	background-color: $blue;
+	height: 100vh;
+	min-height: 650px;
+	color: #fff;
+	position: relative;
+
+	&::before{
+		position: absolute;
+		bottom: -40px;
+		left: 2%;
+		content: url('./../../img/decor/leaf-3.png');
+	}
+
+	&::after{
+		content: url('./../../img/decor/berries-leaf.png');
+		position: absolute;
+		bottom: -49px;
+		right: 0;
+	}
+}
+
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.menu__list{
+	display: flex;
+	align-items: center;
+}
+.menu__link{
+	text-decoration: none;
+}
+
+.menu__item{
+	margin-right: 28px;
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.phone-number{
+	font-size: 24px;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+.phone-number__icon-img{
+	height: 13px;
+	width: 13px;
+	margin-right: 6px;
+}
+
+.hero__container{
+	background: url('../../img/decor/granola-bar-mockup.png') right center/50% auto no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	padding: 24px 0 45px;
+}
+
+.hero__title-section{
+	width: 46%;
+}
+
+.hero__title-main{
+	font-size: 48px;
+	line-height: 1.2;
+	font-weight: 700;
+	margin-bottom: 7px;
+	text-transform: uppercase;
+}
+
+.hero__title-desc{
+	font-size: 21px;
+	margin-bottom: 49px;
+	padding-right: 15%;
+	line-height: 25px;
+}
