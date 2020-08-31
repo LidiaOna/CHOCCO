@@ -1,5 +1,5 @@
 .hero{
-	background: url('../../img/decor/pattern-1.png') right bottom no-repeat;
+	background: url('../img/decor/pattern-1.png') right bottom no-repeat;
 	background-color: $blue;
 	height: 100vh;
 	min-height: 650px;
@@ -10,16 +10,16 @@
 		position: absolute;
 		bottom: -40px;
 		left: 2%;
-		content: url('./../../img/decor/leaf-3.png');
-		z-index: 50;
+		content: url('../img/decor/leaf-3.png');
+		z-index: $z-decor;
 	}
 
 	&::after{
-		content: url('./../../img/decor/berries-leaf.png');
+		content: url('../img/decor/berries-leaf.png');
 		position: absolute;
 		bottom: -49px;
 		right: 0;
-		z-index: 50;
+		z-index: $z-decor;
 	}
 }
 
@@ -56,7 +56,7 @@
 }
 
 .hero__container{
-	background: url('../../img/decor/granola-bar-mockup.png') right center/50% auto no-repeat;
+	background: url('../img/decor/granola-bar-mockup.png') right center/50% auto no-repeat;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

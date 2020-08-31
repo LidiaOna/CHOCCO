@@ -1,25 +1,25 @@
 .reviews-section{
 	position: relative;
-	background: url('./../../img/decor/strawberry-1.png') right top 10% no-repeat;
+	background: url('../img/decor/strawberry-1.png') right top 10% no-repeat;
 
 	&::after{
-		content: url('./../../img/decor/berries-2.png');
+		content: url('../img/decor/berries-2.png');
 		position: absolute;
 		bottom: -90px;
 		left: 0;
-		z-index: 50;
+		z-index: $z-decor;
 	}
 	&::before{
-		content: url('./../../img/decor/pattern-5.png');
+		content: url('../img/decor/pattern-5.png');
 		position: absolute;
 		left: 0;
 		bottom: -163px;
-		z-index: 50;
+		z-index: $z-decor;
 	}
 }
 
 .reviews__display{
-	background: #F8FAF9 url('../../img/decor/pattern-4.png') right top no-repeat;
+	background: #F8FAF9 url('../img/decor/pattern-4.png') right top no-repeat;
 	padding: 42px;
 	margin-bottom: 25px;
 	overflow: hidden;

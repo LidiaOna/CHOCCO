@@ -1,13 +1,13 @@
 .benefits-section{
 	position: relative;
-	background: url('./../../img/decor/pattern-2.png') left top 57% no-repeat;
+	background: url('../img/decor/pattern-2.png') left top 57% no-repeat;
 
 	&::before{
-		content: url('./../../img/decor/raspberry-1.png');
+		content: url('../img/decor/raspberry-1.png');
 		position: absolute;
 		bottom: -100px;
 		left: 0;
-		z-index: 50;
+		z-index: $z-decor;
 	}
 }
 
@@ -20,7 +20,7 @@
 	position: relative;
 
 	&::before{
-		content: url('./../../img/decor/shape.png');
+		content: url('../img/decor/shape.png');
 		position: absolute;
 		top: 30px;
 		right: 0;
