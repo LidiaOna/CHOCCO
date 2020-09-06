@@ -1,45 +1,48 @@
-.btn{
-	font-size: 19px;
-	font-weight: 800;
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: 21px 36px;
-	border-radius: 100px;
-	line-height: 1;
-	display: inline-block;
-	border: none;
-	outline: none;
+.btn {
+  font-size: rem(19px);
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: rem(21px) rem(36px);
+  border-radius: rem(100px);
+  line-height: 1;
+  display: inline-block;
+  border: none;
+  outline: none;
 
-	&--theme--white{
-		background: #fff;
-		color: $darkGreen;
+  &--theme--white {
+    background: #fff;
+    color: $darkGreen;
 
-		&:hover{
-			color: #fff;
+    &:hover {
+      color: #fff;
 			background: $darkGreen;
-		}
-	}
+			transition: .3s;
+    }
+  }
 
-	&--theme--green{
-		background: $darkGreen;
-		color: #fff;
+  &--theme--green {
+    background: $darkGreen;
+    color: #fff;
 
-		&:hover{
-			background: #fff;
+    &:hover {
+      background: #fff;
 			color: $darkGreen;
-		}
-	}
+			transition: .3s;
+    }
+  }
 
-	&--theme--transperent{
-		background: transparent;
-		color: $darkGreen;
-		text-transform: none;
-		font-weight: 400;
+  &--theme--transperent {
+    background: transparent;
+    color: $darkGreen;
+    text-transform: none;
+    font-weight: 400;
 
 
-		&:hover{
-			background: transparent;
+    &:hover {
+      background: transparent;
 			color: #292929;
-		}
-	}
+			transition: .3s;
+    }
+  }
 }

@@ -3,12 +3,15 @@
 }
 
 .feature__icon{
-	width: 42px;
-	margin-right: 12px;
+	display: block;
+	width: rem(42px);
+	height: rem(42px);
+	margin-right: rem(12px);
+	fill: #fff;
 }
 
 .feature__text{
-	font-size: 16px;
-	line-height: 18px;
-	max-width: 80px;
+	font-size: rem(16px);
+	line-height: rem(18px);
+	max-width: rem(80px);
 }

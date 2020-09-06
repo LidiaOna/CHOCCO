@@ -2,13 +2,24 @@
 	background: url('../img/decor/pattern-1.png') right bottom no-repeat;
 	background-color: $blue;
 	height: 100vh;
-	min-height: 650px;
+	min-height: rem(650px);
 	color: #fff;
 	position: relative;
 
+	@include tablets{
+		background-position: right bottom 80%;
+		background-size: 70%;
+	}
+
+	&::before, &::after{
+		@include tablets{
+			display: none;
+		}
+	}
+
 	&::before{
 		position: absolute;
-		bottom: -40px;
+		bottom: rem(-40px);
 		left: 2%;
 		content: url('../img/decor/leaf-3.png');
 		z-index: $z-decor;
@@ -17,42 +28,10 @@
 	&::after{
 		content: url('../img/decor/berries-leaf.png');
 		position: absolute;
-		bottom: -49px;
+		bottom: rem(-49px);
 		right: 0;
 		z-index: $z-decor;
 	}
-}
-
-.header{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.menu__list{
-	display: flex;
-	align-items: center;
-}
-.menu__link{
-	text-decoration: none;
-}
-
-.menu__item{
-	margin-right: 28px;
-	&:last-child{
-		margin-right: 0;
-	}
-}
-
-.phone-number{
-	font-size: 24px;
-	text-decoration: none;
-	display: flex;
-	align-items: center;
-}
-.phone-number__icon-img{
-	height: 13px;
-	width: 13px;
-	margin-right: 6px;
 }
 
 .hero__container{
@@ -61,24 +40,64 @@
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
-	padding: 24px 0 45px;
+	padding: rem(24px) 0 rem(45px);
+
+	@include tablets{
+		background: none;
+	}
 }
 
 .hero__title-section{
 	width: 46%;
+
+	@include tablets{
+		width: 100%;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		&::before{
+			content: "";
+			width: rem(316px);
+			height: rem(330px);
+			background: url(../img/decor/bg-768.png) center center/contain no-repeat;
+			margin-bottom: rem(14px);
+		}
+	}
+}
+.hero__icons-section{
+	@include tablets {
+		display: none;
+	}
 }
 
 .hero__title-main{
-	font-size: 48px;
+	font-size: rem(48px);
 	line-height: 1.2;
 	font-weight: 700;
-	margin-bottom: 7px;
+	margin-bottom: rem(7px);
 	text-transform: uppercase;
+
+	@include phones{
+		line-height: 98%;
+	}
 }
 
 .hero__title-desc{
-	font-size: 21px;
-	margin-bottom: 49px;
+	font-size: rem(21px);
+	margin-bottom: rem(49px);
 	padding-right: 15%;
-	line-height: 25px;
+	line-height: rem(25px);
+
+	@include tablets {
+		padding: 0 25%;
+		margin-bottom: rem(30px);
+	}
+
+	@include phones {
+		padding: 0 10%;
+	}
 }

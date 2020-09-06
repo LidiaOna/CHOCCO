@@ -1,21 +1,30 @@
 $containerWidth: 940px;
 $baseFontSize: 18px;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
 $blue: #61C4D9;
 $darkGreen: #365A49;
 
 $z-fixed-menu: 100;
 $z-decor: 50;
 
+@import "media";
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import "layout";
+
 @import "blocks/hero.scss";
+@import "blocks/header.scss";
 @import "blocks/features.scss";
 @import "blocks/feature.scss";
 @import "blocks/btn.scss";
+@import "blocks/menu.scss";
+@import "blocks/hamburger.scss";
 @import "blocks/section.scss";
 @import "blocks/headline.scss";
 @import "blocks/benefits.scss";
@@ -26,3 +35,7 @@ $z-decor: 50;
 @import "blocks/form.scss";
 @import "blocks/radio.scss";
 @import "blocks/fixed-menu.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
+@import "blocks/contacts.scss";
+@import "blocks/socials.scss";

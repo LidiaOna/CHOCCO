@@ -6,13 +6,22 @@
 	&::before{
 		content: url('../img/decor/blueberries-2.png');
 		position: absolute;
-		bottom: 69px;
+		bottom: rem(69px);
 		left: 5%;
+
+		@include tablets{
+			display: none;
+		}
 	}
+
 	&::after{
 		content: url('../img/decor/leaf-1.png');
 		position: absolute;
-		bottom: 58px;
+		bottom: rem(58px);
 		right: 5%;
+
+		@include tablets{
+			display: none;
+		}
 	}
 }
