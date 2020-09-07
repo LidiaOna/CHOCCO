@@ -40,8 +40,9 @@
 .form__input {
 	width: 100%;
 	padding: rem(18px) rem(12px);
-	border: rem(3px) solid transparent;
+	outline: rem(3px) solid transparent;
 	border-radius: rem(4px);
+	border: none;
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	font-size: rem(14px);
 
@@ -59,8 +60,7 @@
 	}
 
 	&:focus{
-	border: rem(3px) solid #DEE2BD;
-	outline: none;
+	outline: rem(3px) solid #DEE2BD;
 	}
 }
 
