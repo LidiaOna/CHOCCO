@@ -737,8 +737,9 @@ footer {
 .form__input {
   width: 100%;
   padding: 1rem 0.6666666667rem;
-  border: 0.1666666667rem solid transparent;
+  outline: 0.1666666667rem solid transparent;
   border-radius: 0.2222222222rem;
+  border: none;
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 0.7777777778rem;
 }
@@ -757,8 +758,7 @@ footer {
   }
 }
 .form__input:focus {
-  border: 0.1666666667rem solid #DEE2BD;
-  outline: none;
+  outline: 0.1666666667rem solid #DEE2BD;
 }
 
 .form__controls {
