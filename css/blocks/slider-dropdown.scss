@@ -1,0 +1,34 @@
+.slider__dropdown{
+	width: rem(273px);
+	height: rem(344px);
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rem(4px) rem(4px) rem(40px) rgba(0, 0, 0, 0.06);
+	left: rem(91px);
+	top: 0;
+	border-radius: rem(4px);
+	padding: rem(30px) rem(25px);
+	position: absolute;
+	display: none;
+}
+
+.dropdown__list {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.dropdown__item {
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+	color: #000;
+}
+
+.dropdown__icon {
+	width: rem(25px);
+	height: rem(25px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

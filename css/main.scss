@@ -11,6 +11,7 @@ $darkGreen: #365A49;
 $z-fixed-menu: 100;
 $z-decor: 50;
 
+
 @import "media";
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
@@ -29,6 +30,8 @@ $z-decor: 50;
 @import "blocks/headline.scss";
 @import "blocks/benefits.scss";
 @import "blocks/benefit.scss";
+@import "blocks/slider.scss";
+@import "blocks/slider-dropdown.scss";
 @import "blocks/reviews.scss";
 @import "blocks/interactive-avatar.scss";
 @import "blocks/order.scss";

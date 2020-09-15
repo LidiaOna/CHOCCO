@@ -1,0 +1,169 @@
+.slider-section{
+	background: #F8FAF9;
+}
+
+.slider-container{
+	display: flex;
+	justify-content: center;
+}
+
+.slider__sidewalls{
+	display: flex;
+	align-items: center;	
+	@include tablets{
+		align-items: none;
+	}
+}
+
+.slider__arrow-left{
+	transform: scaleX(-1);
+}
+
+.slider__arrow-svg{
+	width: rem(13px);
+	height: rem(27px);
+}
+
+.slider{
+	display: flex;
+	@include tablets {
+		flex-direction: column;
+		text-align: center;
+  }
+}
+
+.slider__wrapper-img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include tablets{
+		margin-top: 10%;
+		max-height: 50%;
+	}
+}
+
+.slider__img{
+	object-fit: contain;
+	@include tablets{
+		height: 100%;
+	}
+}
+
+.slider__info{
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	max-width: 45%;
+	@include tablets{
+		max-width: 100%;
+	}
+}
+
+.slider__composition{
+	width: rem(91px);
+	height: rem(91px);
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	position: relative;
+	margin-bottom: 23px;
+	@include  tablets {
+		display: none;
+	}
+}
+
+.slider__composition-link{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #86C3D7;
+	width: 100%;
+	height: 100%;
+	border-radius: rem(4px);
+	border: none;
+	outline: none;
+	cursor: pointer;
+	:hover {
+		background:#60AACC;
+	}
+}
+
+.slider__link-icon{
+	width: rem(46px);
+	height: rem(46px);
+	fill: #fff;
+	margin-bottom: rem(5px);
+}
+
+.slider__link-text{
+	color: #fff;
+	font-size: rem(14px);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.slider__title{
+	font-size: rem(36px);
+	font-weight: 700;
+	line-height: rem(43px);
+	color: #292929;
+	text-transform: uppercase;
+	margin-bottom: rem(23px);
+	@include tablets {
+		font-size: rem(30px);
+		line-height: rem(36px);
+		margin-bottom: rem(14px);
+	}
+}
+
+.slider__desc{
+	display: flex;
+	flex-direction: column;
+}
+
+.slider__desc-text{
+	margin-bottom: rem(23px);
+}
+
+.slider__desc-details, .slider__desc-order{
+	@include tablets{
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.details__list{
+	display: flex;
+	margin-bottom: rem(23px);
+}
+
+.details__item{
+	margin-right: rem(45px);
+	text-align: start;
+	@include tablets{
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+.details__desc{
+	display: flex;
+	justify-content: start;
+	font-weight: 700;
+	color: #000;
+}
+
+.slider__desc-order{
+	display: flex;
+	align-items: center;
+}
+
+.slider__desc-price{
+	font-size: rem(60px);
+	line-height: rem(36px);
+	font-weight: 300;
+	color: #151515;
+	margin-right: rem(45px);
+}

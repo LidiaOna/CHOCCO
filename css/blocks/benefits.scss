@@ -17,6 +17,10 @@
 		left: 0;
 		z-index: $z-decor;
 
+		@include tablets{
+			left: -10%;
+		}
+
 		@include phones{
 			display: none;
 		}
