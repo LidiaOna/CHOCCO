@@ -691,6 +691,15 @@ footer {
   }
 }
 
+.slider__composition-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.slider__composition-wrapper :hover {
+  background: #60AACC;
+  transition: 0.3s;
+}
+
 .slider__composition-link {
   display: flex;
   flex-direction: column;
@@ -703,9 +712,6 @@ footer {
   border: none;
   outline: none;
   cursor: pointer;
-}
-.slider__composition-link :hover {
-  background: #60AACC;
 }
 
 .slider__link-icon {
