@@ -382,7 +382,7 @@ footer {
 .overlay {
   height: 100%;
   width: 100%;
-  background-color: #000;
+  background-color: #313131;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -606,7 +606,46 @@ footer {
 }
 
 .slider-section {
+  position: relative;
   background: #F8FAF9;
+}
+.slider-section::after {
+  position: absolute;
+  content: url("../img/decor/blueberries-1.png");
+  right: 0;
+  bottom: -4.4444444444rem;
+  z-index: 50;
+}
+@media screen and (max-width: 768px) {
+  .slider-section::after {
+    transform: scale(0.7);
+    right: -3%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider-section::after {
+    transform: scale(0.5);
+    right: -8%;
+  }
+}
+.slider-section::before {
+  content: url("../img/decor/pattern-3.png");
+  position: absolute;
+  right: 0;
+  bottom: -12.9444444444rem;
+  z-index: 50;
+}
+@media screen and (max-width: 768px) {
+  .slider-section::before {
+    transform: scale(0.7);
+    right: -3%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider-section::before {
+    transform: scale(0.5);
+    right: -8%;
+  }
 }
 
 .slider-container {
@@ -846,12 +885,36 @@ footer {
   left: 0;
   z-index: 50;
 }
+@media screen and (max-width: 768px) {
+  .reviews-section::after {
+    transform: scale(0.7);
+    left: -3%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews-section::after {
+    transform: scale(0.5);
+    left: -8%;
+  }
+}
 .reviews-section::before {
   content: url("../img/decor/pattern-5.png");
   position: absolute;
   left: 0;
   bottom: -9.0555555556rem;
   z-index: 50;
+}
+@media screen and (max-width: 768px) {
+  .reviews-section::before {
+    transform: scale(0.7);
+    left: -3%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews-section::before {
+    transform: scale(0.5);
+    left: -6%;
+  }
 }
 
 .reviews__display {
