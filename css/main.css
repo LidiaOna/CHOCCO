@@ -11,7 +11,7 @@ html {
 }
 @media screen and (max-width: 480px) {
   html {
-    font-size: 16px;
+    font-size: 4vmin;
   }
 }
 
@@ -656,6 +656,7 @@ button, input {
   .slider-section::before {
     transform: scale(0.5);
     right: -13%;
+    bottom: -40%;
   }
 }
 
@@ -716,7 +717,7 @@ button, input {
 }
 @media screen and (max-width: 768px) {
   .slider__img {
-    height: 100%;
+    max-height: 100%;
   }
 }
 
