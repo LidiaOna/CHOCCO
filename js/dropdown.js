@@ -4,4 +4,3 @@ const sliderDropdown = document.querySelector(".slider__dropdown");
 compositionLink.onclick = function() {
 	sliderDropdown.style.display = sliderDropdown.style.display == "block" ? "none" : "block";
 }
-
