@@ -31,8 +31,14 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+  will-change: transform;
 }
 
 .container {
@@ -95,15 +101,21 @@ button, input {
 .hero {
   background: url("../img/decor/pattern-1.png") right bottom no-repeat;
   background-color: #61C4D9;
-  height: 100vh;
+  height: 100%;
   min-height: 36.1111111111rem;
   color: #fff;
   position: relative;
 }
 @media screen and (max-width: 768px) {
   .hero {
+    background-position: right bottom 120%;
+    background-size: 75%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero {
     background-position: right bottom 80%;
-    background-size: 70%;
+    background-size: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -116,14 +128,14 @@ button, input {
   bottom: -2.2222222222rem;
   left: 2%;
   content: url("../img/decor/leaf-3.png");
-  z-index: 50;
+  z-index: 15;
 }
 .hero::after {
   content: url("../img/decor/berries-leaf.png");
   position: absolute;
   bottom: -2.7222222222rem;
   right: 0;
-  z-index: 50;
+  z-index: 15;
 }
 
 .hero__container {
@@ -276,6 +288,7 @@ button, input {
 .btn--theme--green {
   background: #365A49;
   color: #fff;
+  z-index: 25;
 }
 .btn--theme--green:hover {
   background: #fff;
@@ -367,16 +380,17 @@ button, input {
   top: 1.1111111111rem;
   right: 3%;
   height: 1.3888888889rem;
-  width: 2.2222222222rem;
+  width: 1.9444444444rem;
   cursor: pointer;
   z-index: 1020;
   transition: all 0.4s;
 }
 .hamburger__plank {
   width: 100%;
-  height: 2px;
+  height: 3px;
   position: absolute;
   background-color: #fff;
+  box-shadow: 0 0 3px rgba(97, 196, 217, 0.8);
   top: 0;
   left: 0;
   transition: all 0.4s;
@@ -433,7 +447,7 @@ button, input {
   opacity: 0;
 }
 .hamburger--active .hamburger__plank:nth-child(3) {
-  transform: rotate(-45deg) translateY(-15px) translateX(15px);
+  transform: rotate(-45deg) translateY(-14px) translateX(13px);
 }
 
 .overlay--active {
@@ -446,7 +460,7 @@ button, input {
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 36.1111111111rem;
   display: flex;
   flex-direction: column;
@@ -512,7 +526,7 @@ button, input {
   position: absolute;
   bottom: -5.5555555556rem;
   left: 0;
-  z-index: 50;
+  z-index: 15;
 }
 @media screen and (max-width: 768px) {
   .benefits-section::before {
@@ -625,7 +639,7 @@ button, input {
   content: url("../img/decor/blueberries-1.png");
   right: 0;
   bottom: -4.4444444444rem;
-  z-index: 50;
+  z-index: 15;
 }
 @media screen and (max-width: 768px) {
   .slider-section::after {
@@ -644,7 +658,7 @@ button, input {
   position: absolute;
   right: 0;
   bottom: -12.9444444444rem;
-  z-index: 50;
+  z-index: 15;
 }
 @media screen and (max-width: 768px) {
   .slider-section::before {
@@ -741,6 +755,7 @@ button, input {
   justify-content: center;
   position: relative;
   margin-bottom: 23px;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .slider__composition {
@@ -751,6 +766,7 @@ button, input {
 .slider__composition-wrapper {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .slider__composition-wrapper :hover {
   background: #60AACC;
@@ -857,12 +873,16 @@ button, input {
   height: 19.1111111111rem;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0.2222222222rem 0.2222222222rem 2.2222222222rem rgba(0, 0, 0, 0.06);
-  left: 5.0555555556rem;
+  left: 100%;
   top: 0;
   border-radius: 0.2222222222rem;
   padding: 1.6666666667rem 1.3888888889rem;
   position: absolute;
-  display: none;
+  visibility: hidden;
+}
+
+.slider__composition-wrapper:hover .slider__dropdown {
+  visibility: visible;
 }
 
 .dropdown__list {
@@ -901,7 +921,7 @@ button, input {
   position: absolute;
   bottom: -5rem;
   left: 0;
-  z-index: 50;
+  z-index: 15;
 }
 @media screen and (max-width: 768px) {
   .reviews-section::after {
@@ -920,7 +940,7 @@ button, input {
   position: absolute;
   left: 0;
   bottom: -9.0555555556rem;
-  z-index: 50;
+  z-index: 15;
 }
 @media screen and (max-width: 768px) {
   .reviews-section::before {
@@ -1080,6 +1100,259 @@ button, input {
   object-fit: cover;
 }
 
+.player-section {
+  position: relative;
+  background: #F8FAF9;
+  background-image: url(../img/decor/leaf-6.png), url(../img/decor/leaf-3.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 90% 15%, 10% 95%;
+}
+.player-section:before {
+  content: url(../img/decor/blackberry-2.png);
+  position: absolute;
+  right: 0;
+  bottom: -15%;
+  z-index: 15;
+}
+@media screen and (max-width: 768px) {
+  .player-section:before {
+    transform: scale(0.7);
+    right: -6%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player-section:before {
+    transform: scale(0.5);
+    right: -13%;
+  }
+}
+
+.player {
+  position: relative;
+  display: block;
+  width: 36.6666666667rem;
+  height: 22.5rem;
+  object-fit: cover;
+  z-index: 25;
+}
+.player.active .player__splash {
+  display: none;
+}
+.player.paused .player__start {
+  width: 0.7777777778rem;
+  height: 1.2222222222rem;
+  border: none;
+}
+
+.player-section__container {
+  display: flex;
+  justify-content: center;
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../img/video/honey.jpg) center center/cover no-repeat;
+  cursor: pointer;
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.9444444444rem;
+  background: #404040;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.3888888889rem;
+}
+
+.player__start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.player__start--big {
+  position: absolute;
+  opacity: 0.9;
+  top: 52.5%;
+  left: 51.6%;
+  transform: translate(-50%, -50%);
+  height: 6.5555555556rem;
+  width: 4.5555555556rem;
+}
+
+.player__start-svg {
+  width: 0.8333333333rem;
+  height: 1.2222222222rem;
+  fill: #626262;
+}
+.player__start-svg:hover {
+  fill: #fff;
+}
+.player__start-svg--big {
+  height: 100%;
+  width: 100%;
+  fill: #fff;
+}
+
+.player__playback {
+  height: 0.8888888889rem;
+  width: 24.7777777778rem;
+  position: relative;
+}
+.player__playback:before {
+  content: "";
+  height: 0.2222222222rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #626262;
+  display: block;
+  transform: translate(0, -50%);
+}
+
+.player__playback-button {
+  width: 0.6666666667rem;
+  height: 0.6666666667rem;
+  border-radius: 2.7777777778rem;
+  border: none;
+  background: #626262;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+
+.player__duration-completed {
+  margin-right: 0.5555555556rem;
+}
+
+.products-menu-section {
+  background: url(../img/accord/slider.jpg) center center/cover no-repeat;
+  color: #fff;
+  position: relative;
+}
+.products-menu-section::before {
+  content: "";
+  height: 100%;
+  background: rgba(47, 50, 52, 0.3);
+}
+
+.products-menu-section__title {
+  position: absolute;
+  left: 8%;
+  top: 10%;
+  color: #fff;
+}
+
+.products-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.products-menu__item {
+  display: flex;
+}
+
+.products-menu__title {
+  position: relative;
+  width: 100px;
+}
+.products-menu__title:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: 5;
+}
+@media screen and (max-width: 768px) {
+  .products-menu__title {
+    width: 90px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products-menu__title {
+    width: 80px;
+  }
+}
+
+.products-menu__img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 0;
+}
+
+.products-menu__text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: rotate(-90deg) translateY(-50%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 48px;
+  white-space: nowrap;
+  transform-origin: 0 0;
+  margin-top: -2.875rem;
+  z-index: 10;
+}
+@media screen and (max-width: 480px) {
+  .products-menu__text {
+    font-size: 38px;
+  }
+}
+
+.products-menu__content {
+  background: rgba(47, 50, 52, 0.9);
+  width: 0;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.7s;
+}
+
+.products-menu__container {
+  padding: 30px 80px 45px 38px;
+}
+@media screen and (max-width: 480px) {
+  .products-menu__container {
+    padding: 5px 5px;
+  }
+}
+
+.products-menu__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: transparent;
+}
+
+.products-menu__close-icon {
+  height: 15px;
+  width: 15px;
+  fill: #fff;
+}
+@media screen and (max-width: 768px) {
+  .products-menu__close-icon {
+    display: none;
+  }
+}
+
 .team-section {
   position: relative;
 }
@@ -1088,7 +1361,7 @@ button, input {
   content: url("../img/decor/raspberry-2.png");
   left: 3%;
   bottom: -5%;
-  z-index: 50;
+  z-index: 15;
 }
 @media screen and (max-width: 768px) {
   .team-section::before {
@@ -1177,6 +1450,7 @@ button, input {
   height: 0;
   overflow: hidden;
   transition: height 0.3s;
+  z-index: 25;
 }
 @media screen and (max-width: 768px) {
   .team__content {
@@ -1209,13 +1483,13 @@ button, input {
   border: 0 solid transparent;
   border-right-width: 0.2222222222rem;
   border-left-width: 0.2222222222rem;
-  border-top: 0.3333333333rem solid black;
+  border-top: 0.3333333333rem solid #365A49;
   border-bottom: 0;
   display: block;
   margin-left: 0.2222222222rem;
 }
 
-.active .team__title::after {
+.team__item.active .team__title::after {
   content: "";
   transform: rotate(180deg);
 }
@@ -1434,6 +1708,7 @@ button, input {
   position: fixed;
   top: 20%;
   right: 4%;
+  color: #fff;
   z-index: 100;
 }
 @media screen and (max-width: 768px) {
@@ -1446,7 +1721,7 @@ button, input {
   margin-bottom: 0.2777777778rem;
 }
 .fixed-menu__item--active .fixed-menu__link {
-  border-color: #fff;
+  border-color: #365A49;
 }
 
 .fixed-menu__link {
@@ -1469,14 +1744,20 @@ button, input {
   transform: translate(-50%, -50%);
   background: #fff;
 }
+.fixed-menu__link--shadowed:before {
+  background: #365A49;
+}
 
-.map-section {
+.map {
   position: relative;
-  background: url("../img/map/map.png") center/cover no-repeat;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
 }
 
 .footer {
-  position: absolute;
   background-color: #fff;
   bottom: 0;
   right: 0;

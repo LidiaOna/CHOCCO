@@ -9,7 +9,7 @@ $blue: #61C4D9;
 $darkGreen: #365A49;
 
 $z-fixed-menu: 100;
-$z-decor: 50;
+$z-decor: 15;
 
 
 @import "media";
@@ -34,13 +34,14 @@ $z-decor: 50;
 @import "blocks/slider-dropdown.scss";
 @import "blocks/reviews.scss";
 @import "blocks/interactive-avatar.scss";
+@import "blocks/player.scss";
+@import "blocks/products-menu.scss";
 @import "blocks/team.scss";
 @import "blocks/order.scss";
 @import "blocks/form.scss";
 @import "blocks/radio.scss";
 @import "blocks/modal.scss";
 @import "blocks/fixed-menu.scss";
-@import "blocks/map.scss";
 @import "blocks/footer.scss";
 @import "blocks/contacts.scss";
 @import "blocks/socials.scss";
