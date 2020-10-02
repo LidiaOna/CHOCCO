@@ -2,8 +2,9 @@
 	position: fixed;
 	top: 20%;
 	right: 4%;
+	color: #fff;
 	z-index: $z-fixed-menu;
-
+	
 	@include tablets{
 		display: none;
 	}
@@ -14,8 +15,8 @@
 
 	&--active{
 		.fixed-menu__link{
-			border-color: #fff;
-		}	
+			border-color: $darkGreen;
+		}
 	}
 }
 
@@ -38,5 +39,9 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		background: #fff;
+	}
+
+	&--shadowed:before{
+		background: $darkGreen;
 	}
 }

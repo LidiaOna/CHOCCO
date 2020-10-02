@@ -3,13 +3,16 @@
 	height: rem(344px);
 	background: rgba(255, 255, 255, 0.9);
 	box-shadow: rem(4px) rem(4px) rem(40px) rgba(0, 0, 0, 0.06);
-	left: rem(91px);
+	left: 100%;
 	top: 0;
 	border-radius: rem(4px);
 	padding: rem(30px) rem(25px);
 	position: absolute;
-	display: none;
+	visibility: hidden;
+}
 
+.slider__composition-wrapper:hover .slider__dropdown{
+	visibility: visible;
 }
 
 .dropdown__list {
@@ -17,6 +20,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	
 }
 
 .dropdown__item {

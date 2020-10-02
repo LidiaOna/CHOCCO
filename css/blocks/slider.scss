@@ -77,6 +77,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	@include tablets{
 		margin-top: 10%;
 		max-height: 50%;
@@ -85,6 +86,7 @@
 
 .slider__img{
 	object-fit: contain;
+
 	@include tablets{
 		max-height: 100%;
 	}
@@ -108,18 +110,23 @@
   justify-content: center;
 	position: relative;
 	margin-bottom: 23px;
+	position: relative;
+
 	@include  tablets {
 		display: none;
 	}
 }
+
 .slider__composition-wrapper{
 	width: 100%;
 	height: 100%;
+	position: relative;
 	:hover{
 		background:#60AACC;
 		transition: .3s;
 	}
 }
+
 .slider__composition-link{
 	display: flex;
 	flex-direction: column;
@@ -140,6 +147,8 @@
 	fill: #fff;
 	margin-bottom: rem(5px);
 }
+
+
 
 .slider__link-text{
 	color: #fff;

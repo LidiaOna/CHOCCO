@@ -1,0 +1,108 @@
+.products-menu-section{
+	background: url(../img/accord/slider.jpg) center center/cover no-repeat;
+	color: #fff;
+	position: relative;
+	
+	&::before{
+		content: "";
+		height: 100%;
+    background: rgba(47, 50, 52, 0.3);
+	}
+}
+
+.products-menu-section__title{
+	position: absolute;
+	left: 8%;
+	top: 10%;
+	color: #fff;
+}
+
+.products-menu{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+}
+
+.products-menu__item{
+	display: flex;
+}
+
+.products-menu__title{
+	position: relative;
+	width: 100px;
+	&:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.6;
+		z-index: 5;
+	}
+	@include tablets{
+		width: 90px;
+	}
+	@include phones{
+		width: 80px;
+	}
+}
+
+.products-menu__img{
+	height: 100%;
+	object-fit: cover;
+	object-position: 30% 0;
+}
+
+.products-menu__text{
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: rotate(-90deg) translateY(-50%);
+	color: #fff;
+	font-weight: 700;
+	font-size: 48px;
+	white-space: nowrap;
+	transform-origin: 0 0;	
+	margin-top: -2.875rem;
+	z-index: 10;
+	@include phones{
+		font-size: 38px;
+	}
+}
+
+.products-menu__content{
+	background: rgba(47, 50, 52, 0.9);
+	width: 0;
+	position: relative;
+	overflow: hidden;
+	transition: width .7s;
+}
+
+.products-menu__container{
+	padding: 30px 80px 45px 38px;
+	
+	@include phones{
+		padding: 5px 5px;
+	}
+}
+
+.products-menu__close{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	border: none;
+	background: transparent;
+}
+
+.products-menu__close-icon{
+	height: 15px;
+	width: 15px;
+	fill: #fff;
+	@include tablets{
+		display: none;
+	}
+}
